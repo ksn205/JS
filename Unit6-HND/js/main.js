@@ -11,10 +11,10 @@ function randomPosition() {
 	rec.style.top = j + 'px';
 }
 randomPosition();
+
 function getStart() {
 	rec.addEventListener('mouseover', randomPosition);
 }
-randomPosition();
 
 function removeEvent() {
 	rec.removeEventListener('mouseover', randomPosition);
