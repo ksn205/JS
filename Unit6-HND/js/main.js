@@ -14,6 +14,7 @@ randomPosition();
 function getStart() {
 	rec.addEventListener('mouseover', randomPosition);
 }
+randomPosition();
 
 function removeEvent() {
 	rec.removeEventListener('mouseover', randomPosition);
