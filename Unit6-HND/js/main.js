@@ -11,13 +11,18 @@ function randomPosition() {
 	rec.style.top = j + 'px';
 }
 randomPosition();
-
+function alertLose() {
+	alert('you lose the game!!! *LoL*');
+}
 function getStart() {
+	rec.removeEventListener('mouseover', alertLose);
 	rec.addEventListener('mouseover', randomPosition);
+
 }
 
 function removeEvent() {
 	rec.removeEventListener('mouseover', randomPosition);
+	alertLose();
 }
 
 start.addEventListener('click', getStart);
