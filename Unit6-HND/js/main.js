@@ -46,6 +46,7 @@ function stopDrag() {
 
 }
 function dragRec() {
+	rec.removeEventListener('mouseover', randomPosition);
 	rec.addEventListener('mousedown', startDrag);
 	rec.addEventListener('mouseup', stopDrag );
 }
