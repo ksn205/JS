@@ -1,11 +1,15 @@
 var i;
 var j;
+var x;
+var y;
 var rec = document.getElementById('rectangle');
 var start = document.getElementById('start');
 var stop = document.getElementById('stop');
+var drag = document.getElementById('drag');
+var container = document.getElementById('container');
 
 function randomPosition() {
-	i = Math.floor((Math.random()*1000));
+	i = Math.floor((Math.random()*820));
 	j = Math.floor((Math.random()*600));
 	rec.style.left = i +'px';
 	rec.style.top = j + 'px';
@@ -25,7 +29,29 @@ function removeEvent() {
 	alertLose();
 }
 
+function getMouse(event) {
+ 	x = event.clientX;
+ 	y = event.clientY;
+	rec.style.left = x + 'px';
+	rec.style.top = y + 'px';
+}
+
+function startDrag() {
+	container.addEventListener('mousemove', getMouse);
+	rec.style.background = " blue";
+}
+function stopDrag() {
+	container.removeEventListener('mousemove',getMouse);
+	rec.style.background = " purple";
+
+}
+function dragRec() {
+	rec.addEventListener('mousedown', startDrag);
+	rec.addEventListener('mouseup', stopDrag );
+}
+
 start.addEventListener('click', getStart);
 stop.addEventListener('click', removeEvent);
+drag.addEventListener('click', dragRec);
 
 
