@@ -10,7 +10,7 @@ var container = document.getElementById('container');
 
 function randomPosition() {
 	i = Math.floor((Math.random()*820));
-	j = Math.floor((Math.random()*600));
+	j = Math.floor((Math.random()*550));
 	rec.style.left = i +'px';
 	rec.style.top = j + 'px';
 }

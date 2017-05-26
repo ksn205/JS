@@ -14,6 +14,25 @@
 }
 #container {
 	width : 900px;
-	height: 650px;
+	height: 600px;
 	border: 1px solid black;
+	color:white;
+}
+#start {
+	background: blue;
+	border-radius: 50%;
+	padding: 15px 32px;
+	color:white;
+}
+#stop {
+	background: red;
+	border-radius: 50%;
+	padding: 15px 32px;
+	color:white;
+}
+#drag {
+	background: purple;
+	border-radius: 50%;
+	padding: 15px 32px;
+	color:white;
 }
