@@ -20,11 +20,11 @@ function click(cal) {
 				var result = a/b;
 				try {
 					if(b==0) {
-						throw("Error!")
+						throw('Error! Do not divide zero')
 					}
 				}
 				catch (err) {
-					alert('Error! Do not divide zero');
+					alert(err);
 					result ="";
 				}
 				finally {
